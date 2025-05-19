@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@font-face {
+    font-family: 'Epilogue'; /* Choose a name for your font */
+    src: url('/fonts/Epilogue-VariableFont_wght.ttf') format('truetype'); /* Path to your font */
+}
+.show{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0rem);
+}
+
+.arrow {
+  transform: rotate(180deg);
+  transition: 0.2s ease;
+}
+
+.active{
+  color: black;
+}
+
+.overlay {
+  transition: opacity 0.3s ease;
+}
+
+@layer utilities{
+  .ham-menu {
+            height: 30px;
+            width: 30px;
+            margin-left: auto;
+            position: relative;
+            z-index: 4;
+        }
+        .ham-menu span {
+            height: 4.5px;
+            width: 100%;
+            background-color: black;
+            border-radius: 25px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: .3s ease;
+        }
+        .ham-menu span:nth-child(1) {
+            top: 25%;
+        }
+        .ham-menu span:nth-child(3) {
+            top: 75%;
+        }
+        .ham-menu.active span {
+            background-color: black;
+        }
+        .ham-menu.active span:nth-child(1) {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        .ham-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .ham-menu.active span:nth-child(3) {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        .active{
+            /* transform: translateX(-10); */
+            right: 0;
+        }
+}
