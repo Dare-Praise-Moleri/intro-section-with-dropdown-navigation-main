@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @font-face {
     font-family: 'Epilogue'; /* Choose a name for your font */
-    src: url('./fonts/Epilogue-VariableFont_wght.ttf') format('truetype'); /* Path to your font */
+    src: url('/fonts/Epilogue-VariableFont_wght.ttf') format('truetype'); /* Path to your font */
 }
 .show{
   visibility: visible;
